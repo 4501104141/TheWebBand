@@ -22,12 +22,21 @@ html {
 }
 
 #header {
+  position: fixed;
   height: 46px;
   background-color: black;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
-#nav, .subnav {
-    list-style-type: none;
+#nav {
+  display: inline-block;
+}
+
+#nav,
+.subnav {
+  list-style-type: none;
 }
 
 #nav li {
@@ -51,7 +60,7 @@ html {
 }
 
 #nav li:hover .subnav {
-    display: block;
+  display: block;
 }
 
 #nav > li:hover > a,
@@ -76,8 +85,28 @@ html {
   line-height: 38px;
 }
 
+#nav .nav-arrow-down {
+  font-size: 14px;
+}
+
+#header .search-btn:hover {
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+#header .search-btn {
+  float: right;
+  padding: 0 21px;
+}
+
+#header .search-icon {
+  color: #fff;
+  font-size: 20px;
+  line-height: 46px;
+}
+
 #slider {
-  
+  margin-top: 46px;
 }
 
 #container {
