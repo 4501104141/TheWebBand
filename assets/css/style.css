@@ -140,7 +140,7 @@ html {
 
 #content .content-section {
   width: 800px;
-  padding: 64px 0;
+  padding: 64px 16px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -221,5 +221,56 @@ html {
   color: #fff;
   padding-left: 8px;
   padding-right: 8px;
+}
+/* Places */
+.places-list {
+  margin: 32px -8px 48px;
+}
+.places-item {
+  float: left;
+  width: 33.3333333%;
+  padding: 0 8px;
+}
+.place-img {
+  width: 100%;
+  display: block;
+}
+
+.place-img:hover {
+  opacity: 0.6;
+}
+
+.place-body {
+  background-color: #fff;
+  padding: 0 16px;
+  font-size: 15px;
+}
+.place-heading {
+  font-size: 15px;
+  font-weight: 600;
+  padding-top: 15px;
+}
+.place-time {
+  margin-top: 15px;
+  color: #757575;
+}
+.place-desc {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.place-buy-btn {
+  color: #fff;
+  background-color: #000;
+  display: inline-block;
+  padding: 8px 16px;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.place-buy-btn:hover {
+  background-color: #ccc;
+  color: #000;
 }
 /* Footer section */
