@@ -6,6 +6,8 @@
 }
 html {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
 }
 /* 
 1. Tu ngoai vao trong
@@ -20,6 +22,10 @@ html {
  */
 .clear {
   clear: both;
+}
+
+.text-white {
+  color: #fff;
 }
 
 #header {
@@ -181,3 +187,39 @@ html {
   width: 146px;
   border-radius: 4px;
 }
+/* Tour section */
+.tour-section {
+  background-color: #000;
+}
+
+.tickets-list {
+  background-color: #fff;
+  margin-top: 40px;
+  list-style-type: none;
+}
+
+.tickets-list li {
+  border-bottom: 1px solid #ddd;
+  padding: 8px 16px;
+  color: #757575;
+}
+
+.tickets-list .sold-out {
+  background-color: #f44336;
+  color: #fff;
+  margin-left: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: inline-block;
+}
+
+.tickets-list .quantity {
+  float: right;
+  margin-right: 16px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+/* Footer section */
