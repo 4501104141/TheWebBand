@@ -86,6 +86,40 @@
                         <li>October<span class="sold-out">Sold out</span></li>
                         <li>November <span class="quantity">3</span></li>
                     </ul>
+                    <!-- Places -->
+                    <div class="places-list">
+                        <div class="places-item">
+                            <img src="./assets/img/places/place1.jpg" alt="New York" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                                </p>
+                                <button class="place-buy-btn js-buy-tickets">Buy Tickets</button>
+                            </div>
+                        </div>
+                        <div class="places-item">
+                            <img src="./assets/img/places/place2.jpg" alt="New York" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                                </p>
+                                <button class="place-buy-btn js-buy-tickets">Buy Tickets</button>
+                            </div>
+                        </div>
+                        <div class="places-item">
+                            <img src="./assets/img/places/place3.jpg" alt="New York" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                                </p>
+                                <button class="place-buy-btn js-buy-tickets">Buy Tickets</button>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
                 </div>
             </div>
             <!-- Contact section -->
@@ -99,6 +133,55 @@
 
         </div>
     </div>
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+            <header class="modal-header">
+                <i class="modal-heading-icon ti-bag"></i>
+                Tickets
+            </header>
+            <div class="modal-body">
+                <label for="tickets-quantity" class="modal-label">
+                    <i class="ti-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="tickets-quantity" type="text" class="modal-input" placeholder="How many?">
+                <label for="tickets-email" class="modal-label">
+                    <i class="ti-user"></i>
+                    Send to
+                </label>
+                <input id="tickets-email" type="email" class="modal-input" placeholder="Enter email...">
+                <button id="buy-tickets">
+                    Pay <i class="ti-check"></i>
+                </button>
+            </div>
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="">help?</a></p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-tickets')
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        const modalClose = document.querySelector('.js-modal-close')
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+        modalClose.addEventListener('click', hideBuyTickets)
+        modal.addEventListener('click', hideBuyTickets)
+        modalContainer.addEventListener('click', (event) => {
+            event.stopPropagation()
+        })
+    </script>
 </body>
 
 </html>
