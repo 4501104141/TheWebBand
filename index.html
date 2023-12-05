@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band</title>
-    <link rel="icon" href="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" type="image/x-icon" />
+    <link rel="icon" href="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg"
+        type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 
@@ -34,6 +36,9 @@
             <!-- Begin: Search Button-->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
+            </div>
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
             <!-- End: Search Button-->
         </div>
@@ -154,7 +159,7 @@
             </div>
             <!-- End: Contact section -->
             <div class="map-section">
-                <img src="./assets/img/map.jpg" alt="Map">  
+                <img src="./assets/img/map.jpg" alt="Map">
             </div>
         </div>
         <div id="footer">
@@ -217,6 +222,29 @@
         modalContainer.addEventListener('click', (event) => {
             event.stopPropagation()
         })
+    </script>
+    <!-- Mobile Menu -->
+    <script>
+        let header = document.getElementById('header');
+        let mobileMenu = document.getElementById('mobile-menu');
+        let headerHight = header.clientHeight;
+        // Dong mo mobile menu
+        mobileMenu.onclick = function () {
+            let isClose = header.clientHeight === headerHight;
+            if (isClose) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+        // Tu dong dong khi chon menu
+        let menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (let index = 0; index < menuItems.length; index++) {
+            let menuItem = menuItems[index];
+            menuItem.onclick = function () {
+                header.style.height = null;
+            }
+        }
     </script>
 </body>
 

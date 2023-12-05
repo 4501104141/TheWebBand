@@ -102,6 +102,7 @@ html {
   right: 0;
   top: 0;
   z-index: 1;
+  overflow: hidden;
 }
 
 #nav {
@@ -168,11 +169,25 @@ html {
   cursor: pointer;
 }
 
+#header .search-btn:hover {
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover {
+  background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+  color: #000;
+}
+
+#header .mobile-menu-btn,
 #header .search-btn {
   float: right;
   padding: 0 21px;
 }
-
+#header .menu-icon,
 #header .search-icon {
   color: #fff;
   font-size: 20px;
@@ -206,9 +221,12 @@ html {
 
 #content .content-section {
   width: 800px;
+  max-width: 100%;
   padding: 64px 0 112px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 #content .section-heading {
