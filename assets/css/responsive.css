@@ -19,10 +19,6 @@
     display: inline-block;
   }
 
-  #header {
-    overflow: hidden;
-  }
-
   #header .mobile-menu-btn {
     display: block;
   }
