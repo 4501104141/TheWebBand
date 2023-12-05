@@ -240,9 +240,13 @@
         // Tu dong dong khi chon menu
         let menuItems = document.querySelectorAll('#nav li a[href*="#"]');
         for (let index = 0; index < menuItems.length; index++) {
-            let menuItem = menuItems[index];
-            menuItem.onclick = function () {
-                header.style.height = null;
+            menuItems[index].onclick = function (event) {
+                let isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
             }
         }
     </script>
