@@ -259,7 +259,7 @@ html {
 }
 
 #content .member-list {
-  margin-top: 48px;
+  margin-top: 32px;
   text-align: center;
 }
 
@@ -268,7 +268,7 @@ html {
 }
 
 #content .member-img {
-  margin-top: 15px;
+  margin-top: 5px;
   width: 146px;
   border-radius: 4px;
 }
@@ -309,7 +309,7 @@ html {
 }
 /* Places */
 .places-list {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .place-img {
