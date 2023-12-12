@@ -49,6 +49,8 @@ html {
   cursor: pointer;
   margin-bottom: 16px;
   border: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .btn:hover {

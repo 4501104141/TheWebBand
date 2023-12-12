@@ -11,12 +11,16 @@
   }
   .contact-form .form-control {
     padding: 15px;
+    font-size: 16px;
   }
   .contact-info {
     line-height: 2;
   }
+  .contact-submit-btn {
+    font-size: 18px;
+  }
   #footer .socials-list {
-    font-size: 48px;
+    font-size: 32px;
   }
   #footer .socials-list a {
     margin: 0 8px;
@@ -30,6 +34,9 @@
 @media (min-width: 740px) and (max-width: 1023px) {
   .contact-info {
     line-height: 2;
+  }
+  #footer .socials-list {
+    font-size: 48px;
   }
 }
 /* Mobile */
